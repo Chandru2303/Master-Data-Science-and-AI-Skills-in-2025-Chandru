@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python String Operations</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; background-color: #f9f9f9; }
+        h1, h2 { color: #333; }
+        code { background-color: #eee; padding: 2px 4px; border-radius: 4px; display: block; margin: 5px 0; }
+        pre { background-color: #f4f4f4; padding: 10px; border-left: 4px solid #ccc; overflow-x: auto; }
+        section { margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <h1>Python String Operations</h1>
+
+    <section>
+        <h2>1. Basic String Operations</h2>
+        <h3>Concatenation</h3>
+        <pre><code>greeting = "Hello"
+name = "Alice"
+message = greeting + ", " + name + "!"
+print(message)  # Output: Hello, Alice!</code></pre>
+
+        <h3>Repetition</h3>
+        <pre><code>repeat = "abc" * 3
+print(repeat)  # Output: abcabcabc</code></pre>
+
+        <h3>String Length</h3>
+        <pre><code>text = "Python"
+length = len(text)
+print(length)  # Output: 6</code></pre>
+    </section>
+
+    <section>
+        <h2>2. String Indexing and Slicing</h2>
+        <h3>Indexing</h3>
+        <pre><code>text = "Hello"
+print(text[0])  # 'H'
+print(text[-1]) # 'o'</code></pre>
+
+        <h3>Slicing</h3>
+        <pre><code>text = "Hello, World!"
+substring = text[0:5]
+print(substring)  # 'Hello'</code></pre>
+        <pre><code>print(text[:3])  # 'Hel'
+print(text[3:])  # 'lo'</code></pre>
+    </section>
+
+    <section>
+        <h2>3. String Methods</h2>
+        <pre><code>text = "Hello"
+print(text.lower())  # 'hello'
+print(text.upper())  # 'HELLO'</code></pre>
+        <pre><code>text = "  Python  "
+print(text.strip())  # 'Python'</code></pre>
+        <pre><code>text = "Hello, World!"
+new_text = text.replace("World", "Alice")
+print(new_text)  # 'Hello, Alice!'</code></pre>
+        <pre><code>text = "apple,banana,cherry"
+fruits = text.split(",")
+print(fruits)  # ['apple', 'banana', 'cherry']</code></pre>
+        <pre><code>text = "Hello, World!"
+index = text.find("World")
+print(index)  # 7</code></pre>
+    </section>
+
+    <section>
+        <h2>4. Formatted Strings (f-strings)</h2>
+        <pre><code>name = "Alice"
+age = 25
+greeting = f"Hello, {name}! You are {age} years old."
+print(greeting)</code></pre>
+    </section>
+
+    <section>
+        <h2>5. Escaping Characters</h2>
+        <pre><code>quote = "He said, \"Hello, World!\""
+print(quote)</code></pre>
+        <pre><code>text = 'It\'s a beautiful day!'
+print(text)</code></pre>
+    </section>
+
+    <section>
+        <h2>6. Multiline Strings</h2>
+        <pre><code>text = """This is a
+multiline string
+in Python."""
+print(text)</code></pre>
+    </section>
+
+    <section>
+        <h2>7. Strings in Different Places</h2>
+        <h3>As Input/Output</h3>
+        <pre><code>name = input("Enter your name: ")
+print(f"Hello, {name}!")</code></pre>
+
+        <h3>In File Operations</h3>
+        <pre><code>with open('example.txt', 'w') as file:
+    file.write("Hello, file!")
+
+with open('example.txt', 'r') as file:
+    content = file.read()
+    print(content)</code></pre>
+
+        <h3>As Part of Data Structures</h3>
+        <pre><code>data = {
+    "name": "Alice",
+    "city": "New York"
+}
+print(data["name"])  # Output: Alice</code></pre>
+
+        <h3>In Regular Expressions</h3>
+        <pre><code>import re
+text = "The quick brown fox"
+match = re.search(r"quick", text)
+if match:
+    print("Found!")</code></pre>
+    </section>
+
+    <section>
+        <h2>8. String Encoding/Decoding</h2>
+        <pre><code>text = "Hello"
+encoded = text.encode('utf-8')
+print(encoded)  # b'Hello'
+
+decoded = encoded.decode('utf-8')
+print(decoded)  # Hello</code></pre>
+    </section>
+</body>
+</html>
